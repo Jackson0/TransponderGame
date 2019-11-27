@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-Game 2 (1)/[Ll]ibrary/
-Game 2 (1)/[Tt]emp/
-Game 2 (1)/[Oo]bj/
-Game 2 (1)/[Bb]uild/
-Game 2 (1)/[Bb]uilds/
-Game 2 (1)/[Ll]ogs/
-Game 2 (1)/[Mm]emoryCaptures/
+Transponder/[Ll]ibrary/
+Transponder/[Tt]emp/
+Transponder/[Oo]bj/
+Transponder/[Bb]uild/
+Transponder/[Bb]uilds/
+Transponder/[Ll]ogs/
+Transponder/[Mm]emoryCaptures/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
