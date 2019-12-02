@@ -20,6 +20,7 @@ public class Projectile : MonoBehaviour
     private float weaponCharge;
     public float weaponChargeRate = 0.2f;
     ProjectileManager projectileMan;
+    public Transform projectileSpawnLocation;
 
 
     private int currentProjectile = 0;
@@ -86,7 +87,7 @@ public class Projectile : MonoBehaviour
     public void weaponFire()
     {
         
-        var proj = Instantiate(projectileType[currentProjectile], this.transform.position, this.transform.rotation);
+        var proj = Instantiate(projectileType[currentProjectile], projectileSpawnLocation.position, this.transform.rotation);
         proj.GetComponent<Rigidbody>().AddRelativeForce(0, 0, weaponCharge, ForceMode.Impulse);
         weaponCharge = weaponMinCharge;
 
