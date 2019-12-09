@@ -2750,11 +2750,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 983637162, guid: 534ab89c21a99bc45afca4afb64c456c, type: 3}
       propertyPath: weaponMaxCharge
-      value: 500
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 983637162, guid: 534ab89c21a99bc45afca4afb64c456c, type: 3}
       propertyPath: weaponChargeRate
-      value: 5
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 534ab89c21a99bc45afca4afb64c456c, type: 3}

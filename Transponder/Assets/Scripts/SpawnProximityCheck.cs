@@ -68,7 +68,7 @@ public class SpawnProximityCheck
                     if (collider.gameObject.layer != 10 &&
                         collider.gameObject.layer != 11)
                     {
-                        Debug.Log(collider.gameObject);
+                        //Debug.Log(collider.gameObject);
                         canSpawnHere = false;
                         break;
                     }
