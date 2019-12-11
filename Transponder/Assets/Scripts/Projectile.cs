@@ -33,12 +33,12 @@ public class Projectile : MonoBehaviour
     }
     void Update()
     {
-       if (Input.GetMouseButtonUp(0))
+       if (Input.GetMouseButtonUp(0) && !Pause_Menu.gameIsPaused)
         {
             weaponFire();
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !Pause_Menu.gameIsPaused)
         {
             weaponChargeUp();
         }

@@ -28,6 +28,7 @@ public class PlayerControl : MonoBehaviour
     private Transform groundChecker;
     Vector2 mouseRotation = Vector2.zero;
 
+    
 
     // Variable thats gonna hold the camera
     Camera playerCam;
@@ -54,15 +55,15 @@ public class PlayerControl : MonoBehaviour
         // With high framerates there is no guarentee FixedUpdate will get called during a frame,
         // and GetButtonDown is only returned during the cycle of one frame
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !Pause_Menu.gameIsPaused)
         {
             jumpButtonPressed = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(0);
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    SceneManager.LoadScene(0);
+        //}
     }
 
     
@@ -177,7 +178,7 @@ public class PlayerControl : MonoBehaviour
     {
         // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.yellow;
-        float offsetFromPlayerPos = 1f;
+        
 
         Vector3 drawPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         Gizmos.DrawWireSphere(drawPosition, 0.5f);
