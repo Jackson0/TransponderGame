@@ -2,15 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class Pause_Menu : MonoBehaviour
 {
 
     
+    // CONSTRUCTOR
+    //public Pause_Menu()
+    //{
+    //    Debug.Log("Fresh Pause_Menu object");
+    //}
 
-
-
+    [NonSerialized]
     public static bool gameIsPaused = false;
 
     public GameObject pauseMenuUI;
@@ -18,6 +22,11 @@ public class Pause_Menu : MonoBehaviour
 
     // Mouse Cursor Stuff
     CursorLockMode lockMode;
+
+    private void Awake()
+    {
+        Debug.Log(gameIsPaused);
+    }
 
     // Update is called once per frame
     private void Update()
@@ -73,10 +82,9 @@ public class Pause_Menu : MonoBehaviour
         tickOnce = true;
     }
 
-    public void backToMainMenu()
-    {
-        
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
-    }
+    // DESTRUCTOR
+    //~Pause_Menu()
+    // {
+    //     Debug.Log("Pause_Menu Object is going to hell");
+    // }
 }
