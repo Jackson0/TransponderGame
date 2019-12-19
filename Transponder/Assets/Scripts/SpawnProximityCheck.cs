@@ -8,7 +8,7 @@ public class SpawnProximityCheck
     bool canSpawn;
 
     // This is the size of the sphere used for Overlapsphere check
-    float sphereCheckSize = 0.2f;
+    float sphereCheckSize = 0.3f;
     // This is the distance between transponder and center of sphere used for Overlapsphere check
     float distanceFromSpawnPoint = 0.3f;
     // Height offset. Test a little above the transponder position to avoid all Overlapsphere tests colliding with floor

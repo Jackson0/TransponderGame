@@ -27,7 +27,7 @@ public class GizmoDrawer : MonoBehaviour
     {
         foreach (var item in plotPoint)
         {
-            Gizmos.DrawWireSphere(item, 0.2f);
+            Gizmos.DrawWireSphere(item, 0.3f);
         }
     }
 }
