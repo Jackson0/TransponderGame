@@ -16,8 +16,12 @@ public class Pause_Menu : MonoBehaviour
 
     [NonSerialized]
     public static bool gameIsPaused = false;
+    
 
     public GameObject pauseMenuUI;
+    public GameObject goalReached;
+    
+
     private bool tickOnce = false;
 
     // Mouse Cursor Stuff
@@ -25,14 +29,17 @@ public class Pause_Menu : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log(gameIsPaused);
+        //Debug.Log(gameIsPaused);
     }
 
     // Update is called once per frame
     private void Update()
     {
-       
-        
+        if (Goal.goalReached)
+        {
+            GoalReached();
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (gameIsPaused)
@@ -45,7 +52,7 @@ public class Pause_Menu : MonoBehaviour
             }
         }
 
-       
+
 
     }
 
@@ -69,6 +76,17 @@ public class Pause_Menu : MonoBehaviour
         gameIsPaused = true;
     }
 
+    void GoalReached()
+    {
+        lockMode = CursorLockMode.None;
+        Cursor.lockState = lockMode;
+        Cursor.visible = true;
+
+        goalReached.SetActive(true);
+        Time.timeScale = 0f;
+        gameIsPaused = true;
+    }
+
     public void Resume()
     {
 
@@ -82,9 +100,5 @@ public class Pause_Menu : MonoBehaviour
         tickOnce = true;
     }
 
-    // DESTRUCTOR
-    //~Pause_Menu()
-    // {
-    //     Debug.Log("Pause_Menu Object is going to hell");
-    // }
+    
 }

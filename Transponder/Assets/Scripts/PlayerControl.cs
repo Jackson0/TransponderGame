@@ -142,7 +142,7 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Triggered!!");
+        //Debug.Log("Triggered!!");
         if (other.gameObject.tag == "Lift")
         {
             rb.useGravity = false;
@@ -153,7 +153,7 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("UNTriggered!!");
+        //Debug.Log("UNTriggered!!");
         if (other.gameObject.tag == "Lift")
         {
             rb.useGravity = true;

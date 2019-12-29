@@ -54,5 +54,10 @@ public class MySceneManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         Pause_Menu.gameIsPaused = false;
+        Goal.goalReached = false;
+
+
     }
+
+   
 }
