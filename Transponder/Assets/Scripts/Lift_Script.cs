@@ -14,7 +14,6 @@ public class Lift_Script : MonoBehaviour
         startPos = transform.position;
 
         rb = GetComponent<Rigidbody>();
-        
     }
 
     // Update is called once per frame
@@ -44,5 +43,4 @@ public class Lift_Script : MonoBehaviour
             player.transform.parent = null;
         }
     }
-
 }

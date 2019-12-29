@@ -17,7 +17,6 @@ public class GunBob : MonoBehaviour
     {
         currentPlayerPos = transform.root.position;
         currentGunPos = transform.localPosition;
-
     }
 
     // Update is called once per frame
@@ -27,20 +26,11 @@ public class GunBob : MonoBehaviour
 
         if (areWeMoving())
         {
-           
             float distance = Mathf.Sin(Time.timeSinceLevelLoad * bobbingSpeed * Time.deltaTime);
             //transform.position = startPos + Vector3.up * distance;
             transform.localPosition = new Vector3(currentGunPos.x, currentGunPos.y + (distance * bobMagnitude), currentGunPos.z);
-            
             //rb.position = startPos + Vector3.up * distance;
         }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     bool areWeMoving()
@@ -51,7 +41,6 @@ public class GunBob : MonoBehaviour
             currentPlayerPos = newPos;
             return true;
         }
-
         return false;
     }
 }
