@@ -18,7 +18,7 @@ MonoBehaviour:
     value: 1
   gradingMode:
     overrideState: 0
-    value: 1
+    value: 0
   externalLut:
     overrideState: 0
     value: {fileID: 0}
@@ -52,14 +52,14 @@ MonoBehaviour:
     overrideState: 0
     value: 1
   temperature:
-    overrideState: 0
-    value: 56
+    overrideState: 1
+    value: 62
   tint:
     overrideState: 0
-    value: -41
+    value: 15
   colorFilter:
     overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
+    value: {r: 0.6745098, g: 2.3686275, b: 3.2941177, a: 1}
   hueShift:
     overrideState: 0
     value: -180
@@ -1335,16 +1335,16 @@ MonoBehaviour:
     value: 0.48
   softKnee:
     overrideState: 0
-    value: 0.368
+    value: 0.309
   clamp:
     overrideState: 0
-    value: 3297
+    value: 64
   diffusion:
-    overrideState: 0
-    value: 2.6
+    overrideState: 1
+    value: 6.77
   anamorphicRatio:
     overrideState: 0
-    value: -0.92
+    value: -0.19
   color:
     overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
